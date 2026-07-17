@@ -1,0 +1,35 @@
+{
+  "name": "gpixl-edu-ai-starter",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "username": "node"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorTheme": "Default Dark Modern",
+        "editor.minimap.enabled": false,
+        "editor.inlineSuggest.enabled": true,
+        "github.copilot.enable": {
+          "*": true
+        }
+      },
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ritwickdey.LiveServer"
+      ]
+    }
+  },
+  "forwardPorts": [5500],
+  "portsAttributes": {
+    "5500": {
+      "label": "Live Web Preview",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "remoteUser": "node"
+}
